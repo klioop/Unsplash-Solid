@@ -9,19 +9,18 @@ import Foundation
 import Alamofire
 
 enum EndPoint {
-    case searchPhotos(query: String)
+    case searchPhotos((query: String, page: Int))
 }
 
 final class UnsplashRemotePhotoRouter {
     
-    let endpoint: EndPoint
-    lazy var path: String = ""
+    private(set) var endPoint: EndPoint?
+    private(set) lazy var path: String = ""
     
-    init(endpoint: EndPoint) {
-        self.endpoint = endpoint
+    func updateEndPoint(_ endPoint: EndPoint) {
+        self.endPoint = endPoint
         createPath()
     }
-    
 }
 
 extension UnsplashRemotePhotoRouter {
@@ -31,8 +30,10 @@ extension UnsplashRemotePhotoRouter {
     }
     
     var method: HTTPMethod {
-        switch endpoint {
+        switch endPoint {
         case .searchPhotos:
+            return .get
+        default:
             return .get
         }
     }
@@ -46,9 +47,10 @@ extension UnsplashRemotePhotoRouter {
     }
     
     var destination: URLEncodedFormParameterEncoder.Destination {
-        switch endpoint {
+        switch endPoint {
         case .searchPhotos:
             return .queryString
+        default: return .queryString
         }
     }
     
@@ -59,8 +61,6 @@ extension UnsplashRemotePhotoRouter {
             return URL(string: "fail")!
         }
     }
-    
-    
 }
 
 // MARK: - Helpers
@@ -68,21 +68,25 @@ extension UnsplashRemotePhotoRouter {
 extension UnsplashRemotePhotoRouter {
     
     private func createPath() {
-        switch endpoint {
+        switch endPoint {
         case .searchPhotos:
             path = "search/photos"
+        default:
+            break
         }
     }
     
     private func createParameters() -> [String: String] {
         var parameters: [String: String] = [:]
         
-        switch endpoint {
-        case let .searchPhotos(query):
-            parameters["query"] = query
+        switch endPoint {
+        case let .searchPhotos(info):
+            parameters["query"] = info.query
+            parameters["page"] = "\(info.page)"
+            return parameters
+        default:
+            return parameters
         }
-        
-        return parameters
     }
     
     private func createuUrl() throws -> URL {

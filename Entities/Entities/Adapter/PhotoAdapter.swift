@@ -7,14 +7,11 @@
 
 import Foundation
 
-class PhotoAdapter {
-    let response: ResponseOfPhotoInfo
+public class PhotoAdapter {
     
-    init(response: ResponseOfPhotoInfo) {
-        self.response = response
-    }
+    public init() {}
     
-    func toPhoto(_ response: ResponseOfPhotoInfo) -> Photo {
+    public func toPhoto(_ response: ResponseOfPhotoInfo) -> Photo {
         let urls = PhotoUrls(raw: response.urls.raw, small: response.urls.small, regular: response.urls.regular, full: response.urls.full)
         
         return Photo(id: response.id, author: response.user.name, width: response.width, height: response.height, likes: response.likes, likedByUser: response.likedByUser, urls: urls)

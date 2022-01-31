@@ -13,69 +13,78 @@ class RemotePhotoRouterTest: XCTestCase {
     
     let baseUrl = "https://api.unsplash.com"
     let searchEndPoint = "search/photos"
+    lazy var sut = makeSUT()
     
     func test_sut_baseUrl() {
-        let sut = makeSUT()
-        
         XCTAssertEqual(sut.baseUrl, baseUrl)
     }
     
     func test_sut_endPoint_rightPath() {
-        let sut = makeSUT()
+        sut.updateEndPoint(.searchPhotos(("a", 1)))
         
-        switch sut.endpoint {
+        switch sut.endPoint {
         case .searchPhotos:
             XCTAssertEqual(sut.path, searchEndPoint)
+        default:
+            XCTAssertNil(sut.endPoint)
         }
     }
     
     func test_sut_endPoint_rightHttpMethod() {
-        let sut = makeSUT()
+        sut.updateEndPoint(.searchPhotos(("a", 1)))
         
-        switch sut.endpoint {
+        switch sut.endPoint {
         case .searchPhotos:
             XCTAssertEqual(sut.method, .get)
+        default:
+            XCTAssertNil(sut.endPoint)
         }
     }
     
     func test_sut_endpoint_rightParameters() {
-        let sut = makeSUT()
+        sut.updateEndPoint(.searchPhotos(("a", 1)))
         
-        switch sut.endpoint {
+        switch sut.endPoint {
         case .searchPhotos:
             let query = sut.parameters["query"]!
+            let page = sut.parameters["page"]!
             XCTAssertEqual(query, "a")
+            XCTAssertEqual(page, "1")
+        default:
+            XCTAssertNil(sut.endPoint)
         }
     }
     
     func test_sut_endpoint_rightDestination() {
-        let sut = makeSUT()
+        sut.updateEndPoint(.searchPhotos(("a", 1)))
         
-        switch sut.endpoint {
+        switch sut.endPoint {
         case .searchPhotos:
             XCTAssertEqual(sut.destination, .queryString)
+        default:
+            XCTAssertNil(sut.endPoint)
         }
     }
     
     func test_sut_endPoint_rightUrl() {
-        let sut = makeSUT()
+        sut.updateEndPoint(.searchPhotos(("a", 1)))
         
-        switch sut.endpoint {
+        switch sut.endPoint {
         case .searchPhotos:
             XCTAssertEqual(sut.url.absoluteString, baseUrl + "/" + searchEndPoint)
+        default:
+            XCTAssertNil(sut.endPoint)
         }
     }
         
-    func test_sut_httpHeaders() {
-        let sut = makeSUT()
-        
+    func test_sut_httpHeaders() {        
         XCTAssertEqual(sut.headers.count, 0)
     }
     
     // MARK: - Helpers
     
-    private func makeSUT(endPoint: EndPoint = .searchPhotos(query: "a")) -> UnsplashRemotePhotoRouter {
-        return UnsplashRemotePhotoRouter(endpoint: endPoint)
+    private func makeSUT() -> UnsplashRemotePhotoRouter {
+        return UnsplashRemotePhotoRouter()
     }
     
 }

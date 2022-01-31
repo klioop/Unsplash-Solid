@@ -15,6 +15,7 @@
 		3100495F27A7B1920017F6A1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3100495E27A7B1920017F6A1 /* Alamofire */; };
 		3100496127A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100496027A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift */; };
 		3100496727A7C5880017F6A1 /* PhotoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100496627A7C5880017F6A1 /* PhotoTest.swift */; };
+		310049A327A7E7440017F6A1 /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310049A227A7E7440017F6A1 /* Entities.framework */; };
 		4EEA38CB1E33B7DB0628C845 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB6E76BBB63C08955D82581 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		3100495B27A7AC240017F6A1 /* RemotePhotoRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePhotoRouterTest.swift; sourceTree = "<group>"; };
 		3100496027A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashRemotePhotoProvider.swift; sourceTree = "<group>"; };
 		3100496627A7C5880017F6A1 /* PhotoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTest.swift; sourceTree = "<group>"; };
+		310049A227A7E7440017F6A1 /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDD9C18DE1C32FDB913EA7 /* Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C38B7427D920CDCA80CB18D /* Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		72A2B6315EFA18FF7107EC96 /* Pods-UnsplashNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork.release.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork/Pods-UnsplashNetwork.release.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310049A327A7E7440017F6A1 /* Entities.framework in Frameworks */,
 				3100495F27A7B1920017F6A1 /* Alamofire in Frameworks */,
 				0230333DBF935AAEE85BF8F9 /* Pods_UnsplashNetwork.framework in Frameworks */,
 			);
@@ -108,6 +111,7 @@
 		37D6DE23CF6EC304D2B4245F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				310049A227A7E7440017F6A1 /* Entities.framework */,
 				1037D657224368C0B00AA4A7 /* Pods_UnsplashNetwork.framework */,
 				BAB6E76BBB63C08955D82581 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework */,
 			);
