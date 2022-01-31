@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import Entities
 import Alamofire
 import RxSwift
-import Entities
 
 class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
     
@@ -16,7 +16,7 @@ class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
     let remoteRouter: UnsplashRemotePhotoRouter
     let photoAdater: PhotoAdapter
     
-    init(session: Session, remoteRouter: UnsplashRemotePhotoRouter) {
+    init(session: Session = .default, remoteRouter: UnsplashRemotePhotoRouter) {
         self.session = session
         self.remoteRouter = remoteRouter
         self.photoAdater = PhotoAdapter()
