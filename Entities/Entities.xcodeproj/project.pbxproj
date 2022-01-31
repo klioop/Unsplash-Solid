@@ -16,6 +16,8 @@
 		3100499C27A7E1490017F6A1 /* ResponseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100499B27A7E1490017F6A1 /* ResponseUser.swift */; };
 		3100499F27A7E1B90017F6A1 /* ResponseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100499E27A7E1B90017F6A1 /* ResponseURL.swift */; };
 		310049A127A7E1D50017F6A1 /* PhotoUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310049A027A7E1D50017F6A1 /* PhotoUrls.swift */; };
+		310049A527A7E7D40017F6A1 /* PhotoAdapterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310049A427A7E7D40017F6A1 /* PhotoAdapterTest.swift */; };
+		310049A827A7E9890017F6A1 /* PhotoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310049A727A7E9890017F6A1 /* PhotoAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		3100499B27A7E1490017F6A1 /* ResponseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUser.swift; sourceTree = "<group>"; };
 		3100499E27A7E1B90017F6A1 /* ResponseURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseURL.swift; sourceTree = "<group>"; };
 		310049A027A7E1D50017F6A1 /* PhotoUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUrls.swift; sourceTree = "<group>"; };
+		310049A427A7E7D40017F6A1 /* PhotoAdapterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAdapterTest.swift; sourceTree = "<group>"; };
+		310049A727A7E9890017F6A1 /* PhotoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		3100497627A7DEA40017F6A1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				310049A627A7E97A0017F6A1 /* Adapter */,
 				3100499D27A7E1B20017F6A1 /* Urls */,
 				3100499A27A7E13E0017F6A1 /* User */,
 				3100499927A7E1130017F6A1 /* Error */,
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				3100499627A7E0AB0017F6A1 /* PhotoTests.swift */,
+				310049A427A7E7D40017F6A1 /* PhotoAdapterTest.swift */,
 			);
 			path = EntitiesTests;
 			sourceTree = "<group>";
@@ -130,6 +136,14 @@
 				310049A027A7E1D50017F6A1 /* PhotoUrls.swift */,
 			);
 			path = Urls;
+			sourceTree = "<group>";
+		};
+		310049A627A7E97A0017F6A1 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				310049A727A7E9890017F6A1 /* PhotoAdapter.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +260,7 @@
 				3100499C27A7E1490017F6A1 /* ResponseUser.swift in Sources */,
 				3100499527A7E0960017F6A1 /* Photo.swift in Sources */,
 				3100498D27A7DECE0017F6A1 /* ResponsePhoto.swift in Sources */,
+				310049A827A7E9890017F6A1 /* PhotoAdapter.swift in Sources */,
 				3100499327A7DF8C0017F6A1 /* CutomError.swift in Sources */,
 				310049A127A7E1D50017F6A1 /* PhotoUrls.swift in Sources */,
 				3100499F27A7E1B90017F6A1 /* ResponseURL.swift in Sources */,
@@ -256,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				310049A527A7E7D40017F6A1 /* PhotoAdapterTest.swift in Sources */,
 				3100499727A7E0AB0017F6A1 /* PhotoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

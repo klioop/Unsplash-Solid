@@ -7,6 +7,6 @@
 
 import Foundation
 
-public enum APIError: Int {
+public enum APIError: Int, Error {
     case invalid = 400
 }
