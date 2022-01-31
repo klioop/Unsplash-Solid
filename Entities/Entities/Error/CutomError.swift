@@ -9,4 +9,6 @@ import Foundation
 
 public enum APIError: Int, Error {
     case invalid = 400
+    case failToFetch = -1
+    case etc = -2
 }

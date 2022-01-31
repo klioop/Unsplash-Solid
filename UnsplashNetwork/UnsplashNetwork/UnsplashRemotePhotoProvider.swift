@@ -31,24 +31,22 @@ class UnsplashRemotePhotoProvider {
         return Single.create { [unowned self] single in
             self.requestWithSession()
                 .responseDecodable(of: ResponseOfSearch.self) { result in
-                    let code = result.response?.statusCode ?? -1
+                    let code = code(result)
                     if (200..<300) ~= code {
                         switch result.result {
                         case let .success(response):
-                            let photos = Set(response.results.map(photoAdater.toPhoto(_:)))
-                            single(.success(.success(photos)))
+                            single(.success(.success(self.photos(response))))
                         case .failure:
-                            single(.success(.failure(.invalid)))
+                            single(.success(.failure(.failToFetch)))
                         }
                     } else {
                         switch code {
                         case 400, 403:
                             single(.success(.failure(.invalid)))
                         default:
-                            single(.success(.failure(.invalid)))
+                            single(.success(.failure(.etc)))
                         }
                     }
-                    
                 }
             return Disposables.create()
         }
@@ -70,5 +68,13 @@ extension UnsplashRemotePhotoProvider {
             encoder: encoder,
             headers: remoteRouter.headers
         ).validate()
+    }
+    
+    private func photos(_ response: ResponseOfSearch) -> Set<Photo> {
+        return Set(response.results.map(photoAdater.toPhoto(_:)))
+    }
+    
+    private func code(_ data: DataResponse<ResponseOfSearch, AFError>) -> Int {
+        return data.response?.statusCode ?? -1
     }
 }
