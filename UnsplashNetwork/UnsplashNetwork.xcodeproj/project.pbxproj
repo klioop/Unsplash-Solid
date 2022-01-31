@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0230333DBF935AAEE85BF8F9 /* Pods_UnsplashNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1037D657224368C0B00AA4A7 /* Pods_UnsplashNetwork.framework */; };
 		3100494A27A7ABCF0017F6A1 /* UnsplashNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3100494127A7ABCF0017F6A1 /* UnsplashNetwork.framework */; };
 		3100495027A7ABCF0017F6A1 /* UnsplashNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 3100494427A7ABCF0017F6A1 /* UnsplashNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3100495A27A7ABFC0017F6A1 /* UnsplashRemotePhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100495927A7ABFC0017F6A1 /* UnsplashRemotePhotoRouter.swift */; };
 		3100495C27A7AC240017F6A1 /* RemotePhotoRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100495B27A7AC240017F6A1 /* RemotePhotoRouterTest.swift */; };
 		3100495F27A7B1920017F6A1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3100495E27A7B1920017F6A1 /* Alamofire */; };
+		3100496127A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100496027A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift */; };
+		3100496727A7C5880017F6A1 /* PhotoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100496627A7C5880017F6A1 /* PhotoTest.swift */; };
+		4EEA38CB1E33B7DB0628C845 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB6E76BBB63C08955D82581 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,11 +29,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1037D657224368C0B00AA4A7 /* Pods_UnsplashNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnsplashNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BFAD3026838A7C52C48BCAC /* Pods-UnsplashNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork/Pods-UnsplashNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		3100494127A7ABCF0017F6A1 /* UnsplashNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnsplashNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3100494427A7ABCF0017F6A1 /* UnsplashNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnsplashNetwork.h; sourceTree = "<group>"; };
 		3100494927A7ABCF0017F6A1 /* UnsplashNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplashNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3100495927A7ABFC0017F6A1 /* UnsplashRemotePhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashRemotePhotoRouter.swift; sourceTree = "<group>"; };
 		3100495B27A7AC240017F6A1 /* RemotePhotoRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePhotoRouterTest.swift; sourceTree = "<group>"; };
+		3100496027A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashRemotePhotoProvider.swift; sourceTree = "<group>"; };
+		3100496627A7C5880017F6A1 /* PhotoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTest.swift; sourceTree = "<group>"; };
+		3AEDD9C18DE1C32FDB913EA7 /* Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3C38B7427D920CDCA80CB18D /* Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
+		72A2B6315EFA18FF7107EC96 /* Pods-UnsplashNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork.release.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork/Pods-UnsplashNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		BAB6E76BBB63C08955D82581 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnsplashNetwork_UnsplashNetworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3100495F27A7B1920017F6A1 /* Alamofire in Frameworks */,
+				0230333DBF935AAEE85BF8F9 /* Pods_UnsplashNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3100494A27A7ABCF0017F6A1 /* UnsplashNetwork.framework in Frameworks */,
+				4EEA38CB1E33B7DB0628C845 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +72,8 @@
 				3100494327A7ABCF0017F6A1 /* UnsplashNetwork */,
 				3100494D27A7ABCF0017F6A1 /* UnsplashNetworkTests */,
 				3100494227A7ABCF0017F6A1 /* Products */,
+				A0BC5894F3F77C76F48CC98C /* Pods */,
+				37D6DE23CF6EC304D2B4245F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +91,7 @@
 			children = (
 				3100494427A7ABCF0017F6A1 /* UnsplashNetwork.h */,
 				3100495927A7ABFC0017F6A1 /* UnsplashRemotePhotoRouter.swift */,
+				3100496027A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift */,
 			);
 			path = UnsplashNetwork;
 			sourceTree = "<group>";
@@ -83,8 +100,29 @@
 			isa = PBXGroup;
 			children = (
 				3100495B27A7AC240017F6A1 /* RemotePhotoRouterTest.swift */,
+				3100496627A7C5880017F6A1 /* PhotoTest.swift */,
 			);
 			path = UnsplashNetworkTests;
+			sourceTree = "<group>";
+		};
+		37D6DE23CF6EC304D2B4245F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1037D657224368C0B00AA4A7 /* Pods_UnsplashNetwork.framework */,
+				BAB6E76BBB63C08955D82581 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0BC5894F3F77C76F48CC98C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1BFAD3026838A7C52C48BCAC /* Pods-UnsplashNetwork.debug.xcconfig */,
+				72A2B6315EFA18FF7107EC96 /* Pods-UnsplashNetwork.release.xcconfig */,
+				3AEDD9C18DE1C32FDB913EA7 /* Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig */,
+				3C38B7427D920CDCA80CB18D /* Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +143,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3100495327A7ABCF0017F6A1 /* Build configuration list for PBXNativeTarget "UnsplashNetwork" */;
 			buildPhases = (
+				E8D1D8FF50EE7DD38A7D9C1B /* [CP] Check Pods Manifest.lock */,
 				3100493C27A7ABCF0017F6A1 /* Headers */,
 				3100493D27A7ABCF0017F6A1 /* Sources */,
 				3100493E27A7ABCF0017F6A1 /* Frameworks */,
@@ -126,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3100495627A7ABCF0017F6A1 /* Build configuration list for PBXNativeTarget "UnsplashNetworkTests" */;
 			buildPhases = (
+				8E2497981D2DD8C439188D75 /* [CP] Check Pods Manifest.lock */,
 				3100494527A7ABCF0017F6A1 /* Sources */,
 				3100494627A7ABCF0017F6A1 /* Frameworks */,
 				3100494727A7ABCF0017F6A1 /* Resources */,
+				AA90A96C868B6A4B06B705AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,12 +239,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8E2497981D2DD8C439188D75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnsplashNetwork-UnsplashNetworkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA90A96C868B6A4B06B705AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8D1D8FF50EE7DD38A7D9C1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UnsplashNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3100493D27A7ABCF0017F6A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3100495A27A7ABFC0017F6A1 /* UnsplashRemotePhotoRouter.swift in Sources */,
+				3100496127A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3100496727A7C5880017F6A1 /* PhotoTest.swift in Sources */,
 				3100495C27A7AC240017F6A1 /* RemotePhotoRouterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +457,7 @@
 		};
 		3100495427A7ABCF0017F6A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BFAD3026838A7C52C48BCAC /* Pods-UnsplashNetwork.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -382,6 +490,7 @@
 		};
 		3100495527A7ABCF0017F6A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72A2B6315EFA18FF7107EC96 /* Pods-UnsplashNetwork.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -413,6 +522,7 @@
 		};
 		3100495727A7ABCF0017F6A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AEDD9C18DE1C32FDB913EA7 /* Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +540,7 @@
 		};
 		3100495827A7ABCF0017F6A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C38B7427D920CDCA80CB18D /* Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

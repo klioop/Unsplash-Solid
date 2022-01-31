@@ -43,7 +43,7 @@ class RemotePhotoRouterTest: XCTestCase {
         
         switch sut.endpoint {
         case .searchPhotos:
-            let query = sut.parameters["query"] as! String
+            let query = sut.parameters["query"]!
             XCTAssertEqual(query, "a")
         }
     }
@@ -71,11 +71,6 @@ class RemotePhotoRouterTest: XCTestCase {
         
         XCTAssertEqual(sut.headers.count, 0)
     }
-    
-    
-    
-    
-    
     
     // MARK: - Helpers
     

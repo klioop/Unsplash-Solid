@@ -41,7 +41,7 @@ extension UnsplashRemotePhotoRouter {
         return HTTPHeaders()
     }
     
-    var parameters: Parameters {
+    var parameters: [String: String] {
         return createParameters()
     }
     
@@ -74,8 +74,8 @@ extension UnsplashRemotePhotoRouter {
         }
     }
     
-    private func createParameters() -> [String: Any] {
-        var parameters: Parameters = [:]
+    private func createParameters() -> [String: String] {
+        var parameters: [String: String] = [:]
         
         switch endpoint {
         case let .searchPhotos(query):
