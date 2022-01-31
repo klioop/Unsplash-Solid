@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 import Entities
 
-class UnsplashRemotePhotoProvider {
+class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
     
     let session: Session
     let remoteRouter: UnsplashRemotePhotoRouter
