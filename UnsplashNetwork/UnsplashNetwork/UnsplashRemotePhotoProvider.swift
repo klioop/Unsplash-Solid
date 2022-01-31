@@ -26,10 +26,10 @@ class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
         with query: String,
         for page: Int
     ) -> Single<Result<Set<Photo>, APIError>>{
-        remoteRouter.updateEndPoint(.searchPhotos((query: query, page: page)))
+        remoteRouter.updateEndPoint(.searchPhotos((query, page)))
         
         return Single.create { [unowned self] single in
-            self.requestWithSession()
+            self.requestData()
                 .responseDecodable(of: ResponseOfSearch.self) { result in
                     let code = code(result)
                     if (200..<300) ~= code {
@@ -58,7 +58,8 @@ class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
 // MARK: - Helpers
 
 extension UnsplashRemotePhotoProvider {
-    private func requestWithSession() -> DataRequest {
+    
+    private func requestData() -> DataRequest {
         let encoder = URLEncodedFormParameterEncoder(destination: remoteRouter.destination)
         
         return session.request(
