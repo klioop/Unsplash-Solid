@@ -41,15 +41,4 @@ public struct ResponseOfPhotoWithOutUser: Codable {
     }
 }
 
-public struct User: Codable {
-    public let id: String
-    public let username: String
-    public let name: String
-}
 
-public struct Urls: Codable {
-    public let raw: String
-    public let full: String
-    public let regular: String
-    public let small: String
-}
