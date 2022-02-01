@@ -42,6 +42,7 @@
 		3100496627A7C5880017F6A1 /* PhotoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTest.swift; sourceTree = "<group>"; };
 		310049A227A7E7440017F6A1 /* Entities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Entities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		310049A927A7F9720017F6A1 /* UnsplashPhotoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhotoAPI.swift; sourceTree = "<group>"; };
+		31004A6A27A94C840017F6A1 /* Pods_PhotoProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PhotoProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEDD9C18DE1C32FDB913EA7 /* Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C38B7427D920CDCA80CB18D /* Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork-UnsplashNetworkTests/Pods-UnsplashNetwork-UnsplashNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		72A2B6315EFA18FF7107EC96 /* Pods-UnsplashNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashNetwork.release.xcconfig"; path = "Target Support Files/Pods-UnsplashNetwork/Pods-UnsplashNetwork.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 				310049A227A7E7440017F6A1 /* Entities.framework */,
 				1037D657224368C0B00AA4A7 /* Pods_UnsplashNetwork.framework */,
 				BAB6E76BBB63C08955D82581 /* Pods_UnsplashNetwork_UnsplashNetworkTests.framework */,
+				31004A6A27A94C840017F6A1 /* Pods_PhotoProvider.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

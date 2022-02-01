@@ -8,10 +8,22 @@
 import Foundation
 
 public struct Photo {
+    
     public let id, author: String
     public let width, height, likes: Int
     public let likedByUser: Bool
     public let urls: PhotoUrls
+    
+    public init(id: String, author: String, width: Int, height: Int, likes: Int, likedByUser: Bool, urls: PhotoUrls) {
+        self.id = id
+        self.author = author
+        self.width = width
+        self.height = height
+        self.likes = likes
+        self.likedByUser = likedByUser
+        self.urls = urls
+    }
+    
 }
 
 extension Photo: Equatable {

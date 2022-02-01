@@ -10,7 +10,7 @@ import Entities
 import Alamofire
 import RxSwift
 
-class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
+public class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
     
     let session: Session
     let remoteRouter: UnsplashRemotePhotoRouter
@@ -22,7 +22,7 @@ class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
         self.photoAdater = PhotoAdapter()
     }
     
-    func fetchPhotos(
+    public func fetchPhotos(
         with query: String,
         for page: Int
     ) -> Single<Result<Set<Photo>, APIError>>{
@@ -35,7 +35,6 @@ class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
                 }
             return Disposables.create()
         }
-            
     }
     
 }

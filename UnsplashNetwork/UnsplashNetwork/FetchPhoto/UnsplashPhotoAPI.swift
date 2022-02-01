@@ -9,6 +9,6 @@ import Foundation
 import Entities
 import RxSwift
 
-protocol UnsplashPhotoAPI {
+public protocol UnsplashPhotoAPI {
     func fetchPhotos(with query: String, for page: Int) -> Single<Result<Set<Photo>, APIError>>
 }
