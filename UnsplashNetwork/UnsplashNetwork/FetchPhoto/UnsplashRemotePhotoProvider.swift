@@ -31,22 +31,7 @@ class UnsplashRemotePhotoProvider: UnsplashPhotoAPI {
         return Single.create { [unowned self] single in
             self.requestData()
                 .responseDecodable(of: ResponseOfSearch.self) { result in
-                    let code = code(result)
-                    if (200..<300) ~= code {
-                        switch result.result {
-                        case let .success(response):
-                            single(.success(.success(self.photos(response))))
-                        case .failure:
-                            single(.success(.failure(.failToFetch)))
-                        }
-                    } else {
-                        switch code {
-                        case 400, 403:
-                            single(.success(.failure(.invalid)))
-                        default:
-                            single(.success(.failure(.etc)))
-                        }
-                    }
+                    self.emit(result, single)
                 }
             return Disposables.create()
         }
@@ -78,4 +63,26 @@ extension UnsplashRemotePhotoProvider {
     private func code(_ data: DataResponse<ResponseOfSearch, AFError>) -> Int {
         return data.response?.statusCode ?? -1
     }
+    
+    private func emit(
+        _ result: DataResponse<ResponseOfSearch, AFError>,
+        _ single: (Result<Result<Set<Photo>, APIError>, Error>) -> Void ) {
+            let code = code(result)
+            if (200..<300) ~= code {
+                switch result.result {
+                case let .success(response):
+                    single(.success(.success(self.photos(response))))
+                case .failure:
+                    single(.success(.failure(.failToFetch)))
+                }
+            } else {
+                switch code {
+                case 400, 403:
+                    single(.success(.failure(.invalid)))
+                default:
+                    single(.success(.failure(.etc)))
+                }
+            }
+
+        }
 }

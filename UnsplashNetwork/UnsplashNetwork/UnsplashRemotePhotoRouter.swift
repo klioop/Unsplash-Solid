@@ -8,16 +8,16 @@
 import Foundation
 import Alamofire
 
-enum EndPoint {
+enum PhotoEndPoint {
     case searchPhotos((query: String, page: Int))
 }
 
 final class UnsplashRemotePhotoRouter {
     
-    private(set) var endPoint: EndPoint?
+    private(set) var endPoint: PhotoEndPoint?
     private(set) lazy var path: String = ""
     
-    func updateEndPoint(_ endPoint: EndPoint) {
+    func updateEndPoint(_ endPoint: PhotoEndPoint) {
         self.endPoint = endPoint
         createPath()
     }

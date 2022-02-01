@@ -94,10 +94,9 @@
 		3100494327A7ABCF0017F6A1 /* UnsplashNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				310049AB27A8242F0017F6A1 /* FetchPhoto */,
 				3100494427A7ABCF0017F6A1 /* UnsplashNetwork.h */,
 				3100495927A7ABFC0017F6A1 /* UnsplashRemotePhotoRouter.swift */,
-				3100496027A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift */,
-				310049A927A7F9720017F6A1 /* UnsplashPhotoAPI.swift */,
 			);
 			path = UnsplashNetwork;
 			sourceTree = "<group>";
@@ -109,6 +108,15 @@
 				3100496627A7C5880017F6A1 /* PhotoTest.swift */,
 			);
 			path = UnsplashNetworkTests;
+			sourceTree = "<group>";
+		};
+		310049AB27A8242F0017F6A1 /* FetchPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				3100496027A7C1DD0017F6A1 /* UnsplashRemotePhotoProvider.swift */,
+				310049A927A7F9720017F6A1 /* UnsplashPhotoAPI.swift */,
+			);
+			path = FetchPhoto;
 			sourceTree = "<group>";
 		};
 		37D6DE23CF6EC304D2B4245F /* Frameworks */ = {
